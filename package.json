@@ -1,0 +1,19 @@
+{
+  "name": "retro-ball-game",
+  "version": "1.0.0",
+  "description": "A retro-style pong game with authentication and leaderboard",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server .",
+    "dev": "npx http-server . -p 3000 -o"
+  },
+  "keywords": ["game", "pong", "retro", "javascript", "html5"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.4"
+  }
+}

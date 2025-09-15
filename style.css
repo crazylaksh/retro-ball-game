@@ -1,0 +1,372 @@
+/* Retro Pong Game Styles */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', monospace;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    color: #00ff00;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid #00ff00;
+}
+
+.game-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-shadow: 0 0 20px #00ff00;
+    letter-spacing: 3px;
+}
+
+.header-btn {
+    background: transparent;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    padding: 10px 20px;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header-btn:hover {
+    background: #00ff00;
+    color: #000;
+    box-shadow: 0 0 20px #00ff00;
+}
+
+/* Menu Styles */
+.menu-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 20px;
+}
+
+.menu-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 60px 40px;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+}
+
+.menu-container h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-shadow: 0 0 15px #00ff00;
+}
+
+.menu-btn {
+    display: block;
+    width: 300px;
+    margin: 20px auto;
+    padding: 15px 30px;
+    background: transparent;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    font-family: 'Orbitron', monospace;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.menu-btn:hover {
+    background: #00ff00;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00ff00;
+}
+
+/* Game Screen Styles */
+.game-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: calc(100vh - 100px);
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.score {
+    font-size: 3rem;
+    font-weight: 900;
+    text-shadow: 0 0 15px #00ff00;
+}
+
+.mode-display {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#gameCanvas {
+    border: 2px solid #00ff00;
+    background: #000;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+}
+
+.back-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.back-btn:hover {
+    background: #00ff00;
+    color: #000;
+    box-shadow: 0 0 20px #00ff00;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+    padding: 40px;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #00ff00;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #fff;
+}
+
+.modal h2 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-shadow: 0 0 15px #00ff00;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+input::placeholder {
+    color: rgba(0, 255, 0, 0.6);
+}
+
+button[type="submit"], #toggleAuthMode {
+    padding: 15px 30px;
+    background: transparent;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover, #toggleAuthMode:hover {
+    background: #00ff00;
+    color: #000;
+    box-shadow: 0 0 20px #00ff00;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.message.success {
+    background: rgba(0, 255, 0, 0.2);
+    border: 1px solid #00ff00;
+    color: #00ff00;
+}
+
+.message.error {
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px solid #ff0000;
+    color: #ff0000;
+}
+
+/* Leaderboard Styles */
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+    padding: 15px 10px;
+    border: 1px solid #00ff00;
+    text-align: center;
+}
+
+.leaderboard-table th {
+    background: rgba(0, 255, 0, 0.2);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.leaderboard-table tr:nth-child(even) {
+    background: rgba(0, 255, 0, 0.1);
+}
+
+.loading {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 40px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .game-title {
+        font-size: 1.8rem;
+    }
+    
+    .header {
+        padding: 15px 20px;
+    }
+    
+    .header-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    #gameCanvas {
+        width: 100%;
+        height: auto;
+        max-width: 800px;
+    }
+    
+    .game-info {
+        width: 100%;
+        max-width: 800px;
+    }
+    
+    .score {
+        font-size: 2rem;
+    }
+    
+    .menu-btn {
+        width: 250px;
+        font-size: 1rem;
+    }
+    
+    .modal-content {
+        width: 95%;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .game-title {
+        font-size: 1.5rem;
+    }
+    
+    .game-info {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .mode-display {
+        order: -1;
+        font-size: 1rem;
+    }
+}
